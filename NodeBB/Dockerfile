@@ -31,10 +31,15 @@ RUN groupadd --gid ${GID} ${USER} \
 
 USER ${USER}
 
-RUN npm install --omit=dev \
+# RUN npm install --omit=dev \
+#     && rm -rf .npm
+#     # TODO: generate lockfiles for each package manager
+#     ## pnpm import \
+
+# Retry method for Network Installs in Dockerfile
+RUN npm install --omit=dev || npm install --omit=dev \
     && rm -rf .npm
-    # TODO: generate lockfiles for each package manager
-    ## pnpm import \
+
 
 FROM node:lts-slim AS final
 
