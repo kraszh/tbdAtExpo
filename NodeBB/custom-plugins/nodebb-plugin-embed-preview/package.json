@@ -1,0 +1,11 @@
+{
+  "name": "nodebb-plugin-embed-preview",
+  "version": "0.1.0",
+  "description": "Embed previews for YouTube, Thingiverse, and Roblox links",
+  "main": "index.js",
+  "author": "Your Name",
+  "license": "MIT",
+  "nbbpm": {
+    "compatibility": "^3.0.0"
+  }
+}

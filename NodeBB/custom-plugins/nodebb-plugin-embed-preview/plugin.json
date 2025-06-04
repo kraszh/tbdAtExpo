@@ -1,0 +1,13 @@
+{
+  "id": "nodebb-plugin-embed-preview",
+  "name": "Embed Preview Plugin",
+  "description": "Embeds YouTube, Thingiverse, and Roblox previews in posts",
+  "url": "https://github.com/yourname/nodebb-plugin-embed-preview",
+  "library": "./index.js",
+  "hooks": [
+    {
+      "hook": "filter:parse.post",
+      "method": "parse"
+    }
+  ]
+}
